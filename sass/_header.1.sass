@@ -2,62 +2,81 @@
 	position: absolute
 	top: 8px
 	right: 8px
+	padding: 10px
 	+desktop()
 		display: none
-.splash-nav
-	display: flex
-	justify-content: center
-	align-items: center
-	
+.splash-nav-desktop-grid-closed .splash-nav-item:not(.splash-nav-item__logo)
+	display: none
+	+desktop()
+		display: initial
+	&:hover
+		border-bottom: 1px solid $thinkful
 .splash-nav-desktop-grid
-	display: flex
-	align-items: center
-	width: 1200px
+	max-width: 1200px
 	margin: auto
-	+mobile()
-			flex-direction: column
-	.splash-nav-primary
+	+desktop()
+		display: flex
+.splash-nav-primary, .splash-nav-secondary
+	+desktop()
 		display: flex
 		align-items: center
-		+mobile()
-			flex-direction: column
-			justify-content: flex-start
-	.splash-nav-secondary
-		margin-left: auto
-	.splash-nav-primary, .splash-nav-secondary
-		&>.splash-nav-item>a:hover
-			border-bottom: 2px solid $thinkful
-		.splash-nav-item__logo>a
-			&:hover
-				border-bottom: none
-	.splash-nav-item
-		list-style-type: none
-		text-decoration: none
-		margin: auto 25px
-		text-transform: uppercase
-		.splash-nav-dropdown
-			position: absolute
-			top: 90px
-			left: 0
-			background-color: #f9fbff
-			width: 100%
-			padding: 50px
-			ul
-				width: 100%
-				display: flex
-				list-style-type: none
-				justify-content: space-around
-				li
-					display: flex
-					justify-content: center
-					text-align: center
-					width: 200px
-					text-transform: none
-					img
-						width: 75px
-					a
-						color: black
-					.splash-nav-dropdown-cp-links
-						display: flex
-						a
-							color: $thinkful
+.splash-nav-primary
+	+desktop()
+		flex: 1
+.splash-nav ul
+	list-style: none
+	padding: 0
+	margin: 0
+.splash-nav-item
+	border-bottom: 1px solid gray
+	+desktop()
+		border: none
+.splash-nav-dropdown-hidden
+	display: none
+.splash-nav-item > a
+	text-transform: uppercase
+	padding: 14px 18px
+	display: block
+	+desktop()
+		padding: 0
+		margin: 25px 25px
+.splash-nav-dropdown-item
+	img
+	 display: none
+	 width: 75px
+	 +desktop()
+		 display: inline
+	+desktop()
+		text-align: center
+		width: 200px
+
+.splash-nav-dropdown
+	background-color: #f9fbff
+	+desktop()
+		position: absolute
+		width: 100%
+		top: 60px
+		left: 0
+		padding: 50px
+.splash-nav-dropdown > ul
+	display: flex
+	justify-content: space-around
+.splash-nav-dropdown-title
+	color: black
+	font-weight: 400
+	padding: 8px 18px
+	margin: 0
+.splash-nav-web-dev-bootcamp-link
+	display: none
+	+desktop()
+		display: block
+.splash-nav-dropdown-cp-links
+	+desktop()
+		display: flex
+		justify-content: center
+	a
+		display: block
+		color: black
+		padding: 8px 18px
+		+desktop()
+			color: $thinkful
