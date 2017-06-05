@@ -80,9 +80,10 @@
       left: 0;
       padding: 50px; } }
 
-.splash-nav-dropdown > ul {
-  display: flex;
-  justify-content: space-around; }
+@media screen and (min-width: 992px) {
+  .splash-nav-dropdown > ul {
+    display: flex;
+    justify-content: space-around; } }
 
 .splash-nav-dropdown-title {
   color: black;
