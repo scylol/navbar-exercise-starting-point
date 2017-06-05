@@ -16,7 +16,8 @@ gulp.task('sass', function() {
   return gulp.src('sass/main.sass')
         .pipe(sass({
           style: 'compressed',
-          errLogToConsole: true
+          errLogToConsole: true,
+          includePaths: ['./sass']
         }))
         .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());

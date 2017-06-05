@@ -1,19 +1,27 @@
 .hamburger
-	background-color: blue
+	position: absolute
+	top: 8px
+	right: 8px
 	+desktop()
 		display: none
 .splash-nav
 	display: flex
 	justify-content: center
 	align-items: center
+	
 .splash-nav-desktop-grid
 	display: flex
 	align-items: center
 	width: 1200px
 	margin: auto
+	+mobile()
+			flex-direction: column
 	.splash-nav-primary
 		display: flex
 		align-items: center
+		+mobile()
+			flex-direction: column
+			justify-content: flex-start
 	.splash-nav-secondary
 		margin-left: auto
 	.splash-nav-primary, .splash-nav-secondary
