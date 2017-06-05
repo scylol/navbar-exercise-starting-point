@@ -10,7 +10,8 @@
 
 .splash-nav {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 .splash-nav-desktop-grid {
   display: flex;
@@ -22,9 +23,41 @@
     align-items: center; }
   .splash-nav-desktop-grid .splash-nav-secondary {
     margin-left: auto; }
+  .splash-nav-desktop-grid .splash-nav-primary > .splash-nav-item > a:hover, .splash-nav-desktop-grid .splash-nav-secondary > .splash-nav-item > a:hover {
+    border-bottom: 2px solid #6799ff; }
+  .splash-nav-desktop-grid .splash-nav-primary .splash-nav-item__logo > a:hover, .splash-nav-desktop-grid .splash-nav-secondary .splash-nav-item__logo > a:hover {
+    border-bottom: none; }
   .splash-nav-desktop-grid .splash-nav-item {
     list-style-type: none;
-    text-decoration: none; }
+    text-decoration: none;
+    margin: auto 25px;
+    text-transform: uppercase; }
+    .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown {
+      position: absolute;
+      top: 90px;
+      left: 0;
+      background-color: #f9fbff;
+      width: 100%;
+      padding: 50px; }
+      .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown ul {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around; }
+        .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown ul li {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          width: 200px;
+          text-transform: none; }
+          .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown ul li img {
+            width: 75px; }
+          .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown ul li a {
+            color: black; }
+          .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown ul li .splash-nav-dropdown-cp-links {
+            display: flex; }
+            .splash-nav-desktop-grid .splash-nav-item .splash-nav-dropdown ul li .splash-nav-dropdown-cp-links a {
+              color: #6799ff; }
 
 @font-face {
   font-family: 'BTC';

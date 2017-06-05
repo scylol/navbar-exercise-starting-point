@@ -1,5 +1,3 @@
-
-  
 =desktop()
   @media screen and (min-width: 992px)
     @content
@@ -19,7 +17,7 @@
 
 // Color Variables
 
-
+$thinkful: #6799ff
 
 
 
@@ -45,18 +43,18 @@
 
 // Global Styles
 
-* 
+*
     box-sizing: border-box
 
 
-body 
+body
     margin: 0
     padding: 0
     font-family: 'Roboto', sans-serif
 
 
 
-.hamburger 
+.hamburger
     width: 48px
     height: 42px
     border: 1px solid #eeeeef
@@ -66,16 +64,14 @@ body
 
 
 
-.hamburger-stripe 
-    background-color: #6799ff
+.hamburger-stripe
+    background-color: $thinkful
     height: 3px
     margin-bottom: 5px
 
 .splash-nav-dropdown-hidden, .splash-nav-desktop-grid-closed
-	display: none    
+	display: none
 
 a
   text-decoration: none
-  color: #6799ff
-
-
+  color: $thinkful
